@@ -1,0 +1,23 @@
+<main name="Camera"></main>
+
+
+<ion-content padding>
+  <div text-center>
+    <button ion-button color="primary" (click)=actionSheetFunc()>
+      <ion-icon name="image"></ion-icon>
+      Choose Image
+    </button>
+    <button ion-button color="primary" (click)=shareFunc()>
+      <ion-icon name="share"></ion-icon>
+      Share
+    </button>
+  </div>
+  <br>
+  <div>
+    <ion-img width="500" height="500" [src]="image">
+    </ion-img>
+  </div>
+
+
+
+</ion-content>

@@ -1,0 +1,30 @@
+<ion-menu [content]="content" id="menu1">
+
+    <ion-header>
+        <ion-toolbar color="danger">
+            <ion-title>ZUMBA</ion-title>
+        </ion-toolbar>
+    </ion-header>
+
+
+
+    <ion-content>
+        <ion-list>
+            <button ion-item menuClose="menu1" (click)=pageChange()>
+                <ion-icon name="contact"></ion-icon>
+                Profile
+            </button>
+            <button ion-item menuClose="menu1" (click)=logoutFunc() *ngIf="toastprovider.isLogin">
+                <ion-icon name="power"></ion-icon>
+                Logout
+            </button>
+            <button ion-item menuClose="menu1" (click)=cameraFunc()>
+                <ion-icon name="image"></ion-icon>
+                Choose Image
+            </button>
+        </ion-list>
+    </ion-content>
+
+</ion-menu>
+
+<ion-nav id="nav" [root]="rootPage" #content swipeBackEnabled="true"></ion-nav>
